@@ -21,7 +21,7 @@ namespace KafkaSimple.Consumer
                 ConsumerConfig config = new()
                 {
                     BootstrapServers = KafkaSimpleConfig.CONST_SERVER,
-                    GroupId = $"{KafkaSimpleConfig.CONST_TOPIC_keyPressed}_group",
+                    GroupId = $"{KafkaSimpleConfig.CONST_TOPIC_keyPressed}_group_{DateTime.UtcNow.Ticks}",
                     AutoOffsetReset = AutoOffsetReset.Earliest
                 };
 
